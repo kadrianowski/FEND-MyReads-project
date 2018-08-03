@@ -14,7 +14,7 @@ class BooksApp extends React.Component {
     showSearchPage: false
   }
 
-  changeBook  = (event, book) => {
+  handleBookChange  = (event, book) => {
     const shelf = event.target.value
 
     if (this.state.books) {

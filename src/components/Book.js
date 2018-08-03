@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 class Book extends Component {
     static propTypes = {
         book: PropTypes.object.isRequired,
-        changeBook: PropTypes.func.isRequired
+        handleBookChange: PropTypes.func.isRequired
     }
 
     render() {
@@ -16,7 +16,7 @@ class Book extends Component {
                     <div className="book-top">
                         <div className="book-cover" style={ book && book.imageLinks && book.imageLinks.thumbnail && { backgroundImage: `url(${book.imageLinks.thumbnail})` }}></div>
                         <div className="book-shelf-changer">
-                            <select defaultValue={book.shelf} onChange={(event) => changeBook(event, book)}>
+                            <select defaultValue={book.shelf} onChange={(event) => handleBookChange(event, book)}>
                                 <option value="none" disabled>Move to...</option>
                                 <option value="currentlyReading">Currently Reading</option>
                                 <option value="wantToRead">Want to Read</option>
