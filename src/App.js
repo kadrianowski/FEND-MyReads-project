@@ -22,7 +22,7 @@ class BooksApp extends Component {
     })
   }
 
-  handleBookChange = (event, book) => {
+  handleChange = (event, book) => {
     const shelf = event.target.value
 
     if (this.state.books) {
@@ -41,13 +41,13 @@ class BooksApp extends Component {
         <Route exact path="/" render={() => (
           <ListBooks
             books={this.state.books}
-            handleBookChange={this.handleBookChange} />
+            handleChange={this.handleChange} />
         )} />
 
         <Route path="/search" render={({ history }) => (
           <Search
             booksShelved={this.state.books}
-            handleBookChange={this.handleBookChange}
+            handleChange={this.handleChange}
           />
         )} />
       </div>

@@ -11,7 +11,7 @@ class Search extends Component {
 
     static propTypes = {
         booksShelved: PropTypes.array,
-        handleBookChange: PropTypes.func.isRequired
+        handleChange: PropTypes.func.isRequired
     }
 
     state = {
@@ -40,13 +40,14 @@ class Search extends Component {
                             b.id === book.id).map(b => book.shelf = b.shelf)))
                     this.setState({ books })
                 } else {
+                    console.log(books.error)
                 }
             })
         }
     }
 
     render() {
-        const { handleBookChange } = this.props
+        const { handleChange } = this.props
         const { query, books } = this.state;
         let bookSearchResult
 
@@ -85,7 +86,7 @@ class Search extends Component {
                                 <Book
                                     key={book.id}
                                     book={book}
-                                    handleBookChange={handleBookChange} />
+                                    handleChange={handleChange} />
                             )
                         })
                         }
