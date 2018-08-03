@@ -5,11 +5,6 @@ import PropTypes from 'prop-types'
 import BookShelf from './BookShelf'
 
 class ListBooks extends Component {
-    static propTypes = {
-        books: PropTypes.array.isRequired,
-        handleChange: PropTypes.func.isRequired
-    }
-
     render() {
         const { books, handleChange } = this.props
         return (
@@ -38,6 +33,10 @@ class ListBooks extends Component {
                 </div>
             </div>
         )
+    }
+    static propTypes = {
+        books: PropTypes.array.isRequired,
+        handleChange: PropTypes.func.isRequired
     }
 }
 

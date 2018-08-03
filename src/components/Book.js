@@ -2,11 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class Book extends Component {
-    static propTypes = {
-        book: PropTypes.object.isRequired,
-        handleChange: PropTypes.func.isRequired
-    }
-
     render() {
         const { book, handleChange } = this.props
 
@@ -30,6 +25,10 @@ class Book extends Component {
                 </div>
             </li>
         )
+    }
+    static propTypes = {
+        book: PropTypes.object.isRequired,
+        handleChange: PropTypes.func.isRequired
     }
 }
 

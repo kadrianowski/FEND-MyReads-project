@@ -9,11 +9,6 @@ import * as BooksAPI from '../BooksAPI'
 
 class Search extends Component {
 
-    static propTypes = {
-        booksShelved: PropTypes.array,
-        handleChange: PropTypes.func.isRequired
-    }
-
     state = {
         query: '',
         books: []
@@ -94,6 +89,11 @@ class Search extends Component {
                 </div>
             </div>
         )
+    }
+    
+    static propTypes = {
+        booksShelved: PropTypes.array,
+        handleChange: PropTypes.func.isRequired
     }
 }
 
