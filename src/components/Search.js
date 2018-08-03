@@ -35,10 +35,11 @@ class Search extends Component {
 
             BooksAPI.search(query, 20).then(books => {
                 if (!books.error) {
-                    books.map(book => (this.props.booksShelved.filter((b) => b.id === book.id).map(b => book.shelf = b.shelf)))
+                    books.map(book =>
+                        (this.props.booksShelved.filter((b) =>
+                            b.id === book.id).map(b => book.shelf = b.shelf)))
                     this.setState({ books })
                 } else {
-                    console.log(books.error)
                 }
             })
         }
@@ -81,7 +82,10 @@ class Search extends Component {
                     <ol className="books-grid">
                         {bookSearchResult.map((book) => {
                             return (
-                                <Book key={book.id} book={book} handleBookChange={handleBookChange} />
+                                <Book
+                                    key={book.id}
+                                    book={book}
+                                    handleBookChange={handleBookChange} />
                             )
                         })
                         }

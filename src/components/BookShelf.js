@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import Book from './Book'
@@ -17,12 +17,15 @@ class BookShelf extends Component {
                 <h2 className="bookshelf-title">{title}</h2>
                 <div className="bookshelf-books">
                     <ol className="books-grid">
-                    { books.map((book) => {
-                        return (
-                            <Book key={book.id} book={book} handleBookChange={handleBookChange} />
-                        )
-                      })
-                    }
+                        {books.map((book) => {
+                            return (
+                                <Book
+                                    key={book.id}
+                                    book={book}
+                                    handleBookChange={handleBookChange} />
+                            )
+                        })
+                        }
                     </ol>
                 </div>
             </div>

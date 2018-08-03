@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
@@ -16,9 +16,18 @@ class ListBooks extends Component {
             <div className="list-books">
                 <div className="list-books-content">
                     <div>
-                        <BookShelf title="Currently Reading" handleBookChange={handleBookChange} books={books.filter(book => book.shelf === 'currentlyReading')}/>
-                        <BookShelf title="Want To Read" handleBookChange={handleBookChange} books={books.filter(book => book.shelf === 'wantToRead')}/>
-                        <BookShelf title="Read" handleBookChange={handleBookChange} books={books.filter(book => book.shelf === 'read')}/>
+                        <BookShelf
+                            title="Currently Reading"
+                            handleBookChange={handleBookChange}
+                            books={books.filter(book => book.shelf === 'currentlyReading')} />
+                        <BookShelf
+                            title="Want To Read"
+                            handleBookChange={handleBookChange}
+                            books={books.filter(book => book.shelf === 'wantToRead')} />
+                        <BookShelf
+                            title="Read"
+                            handleBookChange={handleBookChange}
+                            books={books.filter(book => book.shelf === 'read')} />
                     </div>
                 </div>
                 <div className="open-search">
