@@ -191,11 +191,3 @@ body, .app {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.desc {
-  color: white;
-  font-size: 150px;
-  position: absolute;
-  top: 12%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
