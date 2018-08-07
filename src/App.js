@@ -5,6 +5,7 @@ import * as BooksAPI from './BooksAPI'
 
 import ListBooks from './components/ListBooks'
 import Search from './components/Search'
+import NotFound from './components/NotFound'
 import './App.css'
 
 class BooksApp extends Component {
@@ -51,6 +52,7 @@ class BooksApp extends Component {
               handleChange={this.handleChange}
             />
           )} />
+          <Route component={NotFound} />
         </Switch>
       </div>
     )
