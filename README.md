@@ -2,7 +2,9 @@
 
 # About the Project
 
-This app was built for the Udacity React Nanodegree Program. The purpose of the project is to demonstrate understanding of the basic structure and operation of a React-based app. It also requires to "think in React", breaking the project into smaller, reusable components.
+This app was built for the Udacity React Nanodegree Program. The purpose of the project is to demonstrate understanding of the basic structure and operation of a React-based app. It also requires to "think in React", breaking the project into smaller, reusable components. 
+
+It consists of 3 pages, on the homepage you'll find all 3 shelves with books that you're reading, want to read or already read. There's also a search logic to find more books and a 404 page as a last route.
 
 Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
 
