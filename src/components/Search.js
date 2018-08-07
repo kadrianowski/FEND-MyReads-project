@@ -3,6 +3,7 @@ import escapeRegExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import {DebounceInput} from 'react-debounce-input';
 
 import Book from './Book'
 import * as BooksAPI from '../BooksAPI'
@@ -59,13 +60,14 @@ class Search extends Component {
                 <div className="search-books-bar">
                     <Link to="/" className="close-search">Close</Link>
                     <div className="search-books-input-wrapper">
-                        <input
+                        <DebounceInput
                             type="text"
                             autoFocus
                             placeholder="Search by title or author"
                             value={query}
                             onChange={(event) => this.handleBookSearch(event.target.value)}
-                        />
+                        >
+                        </DebounceInput>
                     </div>
                 </div>
                 <div className="search-books-results">
