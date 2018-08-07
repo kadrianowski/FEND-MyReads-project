@@ -11,7 +11,7 @@ class Book extends Component {
                     <div className="book-top">
                         <div className="book-cover" style={book && book.imageLinks && book.imageLinks.thumbnail && { backgroundImage: `url(${book.imageLinks.thumbnail})`, width: '100%', height: '100%' }}></div>
                         <div className="book-shelf-changer">
-                            <select defaultValue={book.shelf} onChange={(event) => handleChange(event, book)}>
+                            <select defaultValue={book.shelf || "none"} onChange={(event) => handleChange(event, book)}>
                                 <option value="none" disabled>Move to...</option>
                                 <option value="currentlyReading">Currently Reading</option>
                                 <option value="wantToRead">Want to Read</option>
