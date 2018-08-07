@@ -9,7 +9,7 @@ class Book extends Component {
             <li key={book.id}>
                 <div className="book">
                     <div className="book-top">
-                        <div className="book-cover" style={book && book.imageLinks && book.imageLinks.thumbnail && { backgroundImage: `url(${book.imageLinks.thumbnail})` }}></div>
+                        <div className="book-cover" style={book && book.imageLinks && book.imageLinks.thumbnail && { backgroundImage: `url(${book.imageLinks.thumbnail})`, width: '100%', height: '100%' }}></div>
                         <div className="book-shelf-changer">
                             <select defaultValue={book.shelf} onChange={(event) => handleChange(event, book)}>
                                 <option value="none" disabled>Move to...</option>

@@ -1,3 +1,5 @@
+## MyReads App | Udacity FEND Nanodegree | 2018
+
 # About the Project
 
 This game was built for the Udacity React Nanodegree Program. The purpose of the project is to demonstrate understanding of the basic structure and operation of a React-based app.

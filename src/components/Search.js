@@ -90,7 +90,7 @@ class Search extends Component {
             </div>
         )
     }
-    
+
     static propTypes = {
         booksShelved: PropTypes.array,
         handleChange: PropTypes.func.isRequired
