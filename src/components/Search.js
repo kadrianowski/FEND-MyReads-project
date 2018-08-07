@@ -3,7 +3,7 @@ import escapeRegExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import {DebounceInput} from 'react-debounce-input';
+import { DebounceInput } from 'react-debounce-input';
 
 import Book from './Book'
 import * as BooksAPI from '../BooksAPI'
@@ -16,7 +16,7 @@ class Search extends Component {
     }
 
     updateQuery = (query) => {
-        this.setState({ query: query.trim() })
+        this.setState({ query })
     }
 
     clearQuery = () => {
